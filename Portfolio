@@ -189,14 +189,14 @@ body, html {
 .achiv-text {
   text-align: left;
   position: relative;
-  top: 30%;
+  top:40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
 }
 .achiv-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1593933793706-718c54aa34c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMHdhdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-  height: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img.freepik.com/free-vector/condensation-water-drops-rain-droplets-with-light-reflection_107791-4593.jpg?w=826");
+  height: 60%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -266,42 +266,41 @@ button:hover, a:hover {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+img {
+  width: 20%;
+  height: 70%;
+  object-fit:cover;
+  
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+  
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
 }
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.container {
+  max-width:600px;
+  max-height:350px;
+  
+  
+  
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  
 }
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+.container:hover img {
+  opacity:0.3;
 }
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgb(255, 0, 0);
-  padding: 16px;
-  text-align: center;
-  background-color: #000000;
+.container img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
 }
 
     </style>
@@ -384,18 +383,28 @@ body {
 
           <div class="achiv-image" id="achiv">
             <div class="achiv-text">
-              <br>
-              <br>
+             
               <br>
               <br>
               <h1 style="font-size:50px; ">ACHIEVEMENTS</h1>
               <br>
               <br>
+              
+              
               <br>
               <br>
+              <div class="container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/PHP_Logo%2C_text_only.svg/800px-PHP_Logo%2C_text_only.svg.png?20160624002048" alt="">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png" alt="">
+                
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png?20160530175649" alt="">
+             
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/HTML5_logo_black.svg/512px-HTML5_logo_black.svg.png?20110118165859" alt="">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Git-logo-black.svg/273px-Git-logo-black.svg.png?20161028011500" alt="">
+              </div>
     
             
-              <div class="row">
+               <!--<div class="row">
                 <div class="column">
                   <div class="card">
                     <h3>CULTURAL</h3>
@@ -429,8 +438,8 @@ body {
                 </div>
               </div>
 
-            </div>
-          </div>
+            </div>-->
+         </div>
           <hr class="new4">    <!-- section divider -->
           <h1 style=" font-size: 40px;font-style: bold; align-content:center ;" id="contact">CONTACT</h1>
           <div class="mycard">
